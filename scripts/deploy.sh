@@ -34,11 +34,11 @@ npm run build
 copy_assets ../build
 
 cd ../build
-echo "rollcall.audio" > CNAME
+echo "platform9.herokuapp.com" > CNAME
 
 git init
-git config user.name "CI"
-git config user.email "ci@rollcall.audio"
+git config user.name "wh0ami"
+git config user.email "wh0amioffical@mail2tor.com"
 
 git add -A .
 git commit -m "Auto-build of ${MASTER_REV} (master), ${STABLE_REV} (stable)"
