@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js:bundle.js",
+    "start": "budo index.js:bundle.js --port 80",
     "build": "browserify index.js > bundle.js",
     "test": "standard"
   },
