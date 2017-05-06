@@ -307,7 +307,7 @@ function joinRoom (room) {
 
   const message = views.message({
     icon: 'unmute',
-    title: 'Rollcall would like to access your microphone'
+    title: 'Platform9 would like to access your microphone'
   })
 
   byId('messages-container').appendChild(message)
