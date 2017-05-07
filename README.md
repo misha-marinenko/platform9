@@ -2,7 +2,8 @@
 https://platform9.herokuapp.com <br />
 A Free Calls For Everyone in the world.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/misha-marinenko/platform9)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/misha-marinenko/platform9)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/misha-marinenko/platform9.git # [required])
 
 For start your Platform9:
 1. Install latest npm and nodeJS. 
