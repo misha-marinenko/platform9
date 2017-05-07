@@ -2,6 +2,8 @@
 https://platform9.herokuapp.com <br />
 A Free Calls For Everyone in the world.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/misha-marinenko/platform9)
+
 For start your Platform9:
 1. Install latest npm and nodeJS. 
 'sudo apt-get install nodejs nodejs-legacy npm'
