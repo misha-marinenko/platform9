@@ -37,10 +37,10 @@ const context = new AudioContext()
 const waudio = require('waudio')(context)
 
 const recordButton = bel `
-<button id="record" class="ui compact labeled icon button">
-  <i class="circle icon"></i>
-  <span>Record</span>
-</button>
+<span id="record" class="mdl-chip mdl-chip--contact">
+    <span class="mdl-chip__contact mdl-color-text--white"><i class="circle icon"></i></span>
+    <span class="mdl-chip__text">  <div id="recordtext">Record</div></span>
+</span>
 `
 
 const settingsButton = bel `
@@ -71,7 +71,7 @@ worker.onmessage = (e) => {
     $('#record i')
       .removeClass('notched circle loading')
       .addClass('download')
-    $('#record span')
+    $('#record div')
       .text('Download Zip')
   }
 }
@@ -167,7 +167,7 @@ function enableZipDownload () {
     $('#record i')
       .removeClass('download')
       .addClass('notched circle loading')
-    $('#record span')
+    $('#record dev')
       .text('Loading...')
 
     // inform worker to create a zip file
@@ -240,7 +240,7 @@ function recording (swarm, microphone) {
     $('button#record i')
       .removeClass('unmute')
       .addClass('red blink')
-    $('#record span')
+    $('#recordtext span')
       .text('Stop')
     addWindowCloseHandler()
   }
@@ -393,7 +393,7 @@ function joinRoom (room) {
       })
 
       if (!audioStream) {
-        topBar.appendChild(bel `<div class="error notice">Listening only: no audio input available.</div>`)
+        topBar.appendChild(bel `<span class="mdl-chip"><span class="mdl-chip__text">Listening only: no audio input available.</span>`)
       }
     })
   })
