@@ -1,4 +1,4 @@
-/* global window, document, $, requestAnimationFrame, AudioContext, MediaRecorder, URL */
+
 const createSwarm = require('killa-beez')
 const getUserMedia = require('getusermedia')
 const qs = require('querystring')
@@ -15,11 +15,9 @@ const selector = exp => document.querySelector(exp)
 const selectall = exp => document.querySelectorAll(exp)
 const values = obj => Object.keys(obj).map(k => obj[k])
 
-// Services for exchanges.
 const signalHost = 'https://signalexchange.now.sh'
 const roomHost = 'https://roomexchange.now.sh'
 const CLOSE_WARNING = 'The call is still recording and will not be saved. Close the window anyway?'
-// Create User storage instance
 const storage = new UserStorage()
 
 if (typeof window.AudioContext !== 'function' || typeof window.MediaRecorder !== 'function') {
