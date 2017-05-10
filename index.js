@@ -48,6 +48,10 @@ const settingsButton = bel `
   <i class="settings icon"></i>
 </button>
 `
+const audioSettings = bel `
+  get local media data> local_INFO00
+`
+
 
 const mimeType = [
   'audio/webm;codecs=opus',

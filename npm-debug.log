@@ -7,7 +7,7 @@
 6 silly lifecycle platform9@0.0.1~prestart: no script for prestart, continuing
 7 info lifecycle platform9@0.0.1~start: platform9@0.0.1
 8 verbose lifecycle platform9@0.0.1~start: unsafe-perm in lifecycle true
-9 verbose lifecycle platform9@0.0.1~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/wh0ami/platform9/node_modules/.bin:/home/wh0ami/bin:/home/wh0ami/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/wh0ami/Android/Sdk/platrofm-tools:/usr/games:/usr/local/games:/usr/share/java:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+9 verbose lifecycle platform9@0.0.1~start: PATH: /usr/share/npm/bin/node-gyp-bin:/home/wh0ami/platform9/node_modules/.bin:/home/wh0ami/bin:/home/wh0ami/.local/bin:/usr/local/sbin:/usr/local/bin:/opt/idea-IC-171.4249.39/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/wh0ami/Android/Sdk/platrofm-tools:/usr/games:/usr/local/games:/usr/share/java:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
 10 verbose lifecycle platform9@0.0.1~start: CWD: /home/wh0ami/platform9
 11 silly lifecycle platform9@0.0.1~start: Args: [ '-c', 'budo index.js:bundle.js --port $PORT' ]
 12 silly lifecycle platform9@0.0.1~start: Returned: code: 1  signal: null
