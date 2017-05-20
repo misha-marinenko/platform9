@@ -1,4 +1,4 @@
-/* global window, document, $, requestAnimationFrame, AudioContext, MediaRecorder, URL */
+
 const createSwarm = require('killa-beez')
 const getUserMedia = require('getusermedia')
 const qs = require('querystring')
@@ -15,11 +15,9 @@ const selector = exp => document.querySelector(exp)
 const selectall = exp => document.querySelectorAll(exp)
 const values = obj => Object.keys(obj).map(k => obj[k])
 
-// Services for exchanges.
 const signalHost = 'https://signalexchange.now.sh'
 const roomHost = 'https://roomexchange.now.sh'
 const CLOSE_WARNING = 'The call is still recording and will not be saved. Close the window anyway?'
-// Create User storage instance
 const storage = new UserStorage()
 
 if (typeof window.AudioContext !== 'function' || typeof window.MediaRecorder !== 'function') {
@@ -37,10 +35,10 @@ const context = new AudioContext()
 const waudio = require('waudio')(context)
 
 const recordButton = bel `
-<button id="record" class="ui compact labeled icon button">
-  <i class="circle icon"></i>
-  <span>Record</span>
-</button>
+<span id="record" class="mdl-chip mdl-chip--contact">
+    <span class="mdl-chip__contact mdl-color-text--white"><i class="circle icon"></i></span>
+    <span class="mdl-chip__text">  <div id="recordtext">Record</div></span>
+</span>
 `
 
 const settingsButton = bel `
@@ -48,6 +46,10 @@ const settingsButton = bel `
   <i class="settings icon"></i>
 </button>
 `
+const audioSettings = bel `
+  get local media data> local_INFO00
+`
+
 
 const mimeType = [
   'audio/webm;codecs=opus',
@@ -71,7 +73,7 @@ worker.onmessage = (e) => {
     $('#record i')
       .removeClass('notched circle loading')
       .addClass('download')
-    $('#record span')
+    $('#record div')
       .text('Download Zip')
   }
 }
@@ -147,7 +149,9 @@ function connectRecording (pubkey, stream) {
   }
   return ret
 }
-
+function enableAudioRec (){
+/*RUN>9  */
+}
 function enableZipDownload () {
   let elements = selectall('i.download-icon')
   for (let i = 0; i < elements.length; i++) {
@@ -167,7 +171,7 @@ function enableZipDownload () {
     $('#record i')
       .removeClass('download')
       .addClass('notched circle loading')
-    $('#record span')
+    $('#record dev')
       .text('Loading...')
 
     // inform worker to create a zip file
@@ -240,7 +244,7 @@ function recording (swarm, microphone) {
     $('button#record i')
       .removeClass('unmute')
       .addClass('red blink')
-    $('#record span')
+    $('#recordtext span')
       .text('Stop')
     addWindowCloseHandler()
   }
@@ -307,7 +311,7 @@ function joinRoom (room) {
 
   const message = views.message({
     icon: 'unmute',
-    title: 'Rollcall would like to access your microphone'
+    title: 'Platform9 would like to access your microphone'
   })
 
   byId('messages-container').appendChild(message)
@@ -393,7 +397,7 @@ function joinRoom (room) {
       })
 
       if (!audioStream) {
-        topBar.appendChild(bel `<div class="error notice">Listening only: no audio input available.</div>`)
+        topBar.appendChild(bel `<span class="mdl-chip"><span class="mdl-chip__text">Listening only: no audio input available.</span>`)
       }
     })
   })

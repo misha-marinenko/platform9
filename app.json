@@ -1,0 +1,7 @@
+{
+  "name": "Platform9",
+  "description": "Free calls for everyone in the world!",
+  "repository": "https://github.com/misha-marinenko/platform9",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Moskwa_Metro_Line_9.svg/1024px-Moskwa_Metro_Line_9.svg.png",
+  "keywords": ["node", "voip", "rooms", "voice", "calls"]
+}
