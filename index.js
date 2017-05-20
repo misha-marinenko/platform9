@@ -149,7 +149,9 @@ function connectRecording (pubkey, stream) {
   }
   return ret
 }
-
+function enableAudioRec (){
+/*RUN>9  */
+}
 function enableZipDownload () {
   let elements = selectall('i.download-icon')
   for (let i = 0; i < elements.length; i++) {
